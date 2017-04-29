@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="contentTextColor">#4d4d4d</color>
+    <color name="contentTextHintColor">#b8b8b8</color>
+    <color name="contentTextHintColorDarker">#999999</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_light">#d2d4d6</color>
+    <color name="black_alpha_0p">#00000000</color>
+    <color name="black_alpha_50p">#74000000</color>
+    <color name="black_alpha_70p">#b2000000</color>
+    <color name="blue_light">#73c3fe</color>
+</resources>

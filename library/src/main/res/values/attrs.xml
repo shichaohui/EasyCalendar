@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CalendarView">
+
+        <attr name="titleColor" format="color"/>
+        <attr name="weekColor" format="color"/>
+        <attr name="weekBackground" format="color|reference"/>
+        <attr name="monthBackground" format="color|reference"/>
+        <attr name="dateDividerColor" format="color"/>
+        <attr name="dateDividerSize" format="dimension"/>
+        <attr name="imgLastMonth" format="reference"/>
+        <attr name="imgNextMonth" format="reference"/>
+        <attr name="language">
+            <enum name="china" value="1"/>
+            <enum name="english" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+</resources>

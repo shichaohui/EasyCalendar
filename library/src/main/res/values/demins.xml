@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titleBarHeight">40dp</dimen>
+    <dimen name="monthPaddingLeft">15dp</dimen>
+    <dimen name="monthPaddingRight">15dp</dimen>
+    <dimen name="dateDividerSize">1dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+</resources>
