@@ -24,7 +24,7 @@ Quickly customize the calendar UI. You can use `EasyCalendar` to quickly get the
 # API
 
 1. Show or hide overflow date.
-```
+```java
 /**
  * If true, show whole calendar.
  * e.g. showing date is April, if show whole calendar, 03/30 and 05/01 will show.
@@ -35,7 +35,7 @@ public boolean isShowOverflowDate();
 ```
 
 2. Set format for title.
-```
+```java
 /**
  * Constructs a <code>SimpleDateFormat</code> using the given pattern and
  * the default date format symbols for the given locale.
@@ -50,7 +50,7 @@ public void setTitleFormat(String pattern, Locale locale);
 ```
 
 3. Set a listener for callback when date was clicked.
-```
+```java
 /**
  * Set listener for date be clicked.
  *
@@ -60,7 +60,7 @@ public void setOnDateClickedListener(OnDateClickedListener onDateClickedListener
 ```
 
 4. Set a listener for callback when showing month changed.
-```
+```java
 /**
  * Set listener for current showing month changed.
  *
@@ -70,7 +70,7 @@ public void setOnMonthChangedListener(final OnMonthChangedListener onMonthChange
 ```
 
 5. Set can or can't change month by drag.
-```
+```java
 /**
  * Set drag enable for page.
  */
@@ -83,7 +83,7 @@ public boolean canDrag();
 ```
 
 6. Set can or can't fling when finger off screen.
-```
+```java
 /**
  * Set fling enable for page.
  */
@@ -96,7 +96,7 @@ public boolean canFling();
 ```
 
 7. Set the visibility of the button for the month of switch.
-```
+```java
 /**
  * Set button visible for last month.
  *
@@ -113,7 +113,7 @@ public void setNextMonthButtonVisibility(@Visibility int visibility);
 ```
 
 8. Get view of today.
-```
+```java
 /**
  * Return item view of today. If today not showing, return null。
  */
@@ -121,7 +121,7 @@ public View getTodayItemView();
 ```
 
 9. Set the calendar size will wrap content or not.
-```
+```java
 /**
  * Set the layout will wrap content or not.
  *
