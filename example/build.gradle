@@ -33,5 +33,6 @@ dependencies {
         annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     }
 
-    compile project(':library')
+     compile project(':library')
+    // compile 'com.sch.calendar:easy-calendar:1.0.0'
 }
