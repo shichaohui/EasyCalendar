@@ -125,6 +125,7 @@ public View getTodayItemView();
 ```
 
 9. Set the calendar size will wrap content or not.
+Use this api you can set the calendar size will wrap content or not. if true, the layout's height will auto change with animation when month changed.
 ```java
 /**
  * Set the layout will wrap content or not.
@@ -132,6 +133,45 @@ public View getTodayItemView();
  * @param scaleEnable if true, the layout will wrap content.
  */
 public void setScaleEnable(boolean scaleEnable);
+```
+
+# Custom UI for date
+
+You can use default UI for date by [SampleVagueAdapter](https://github.com/shichaohui/EasyCalendar/blob/master/library/src/main/java/com/sch/calendar/adapter/SampleVagueAdapter.java). Default UI only show date.
+```java
+calendarView.setVagueAdapter(new SampleVagueAdapter());
+```
+
+You can custom UI for date by extend [VagueAdapter](https://github.com/shichaohui/EasyCalendar/blob/master/library/src/main/java/com/sch/calendar/adapter/VagueAdapter.java) , e.g. custom UI for checkin.
+```java
+
+// layout_checkin_calendar_item must hava a TextView that's id is tv_day_of_month
+calendarView.setVagueAdapter(new MyVagueAdapter(R.layout.layout_checkin_calendar_item));
+
+private class MyVagueAdapter extends VagueAdapter<Map<String, Map<String, Checkin>>> {
+
+    /**
+     * @params dateLayout layout resource id for date, must hava a TextView that's id is tv_day_of_month
+     */
+    MyVagueAdapter(@LayoutRes int dateLayout) {
+        super(dateLayout);
+    }
+
+    @Override
+    public void onBindVague(View itemView, int year, @Month int month, @DayOfMonth int dayOfMonth) {
+        // do something, show custom data  
+    }
+
+    @Override
+    public void flagToday(View todayView) {            
+        // do something, set a flag for today's view
+    }
+
+    @Override
+    public void flagNotToday(View dayView, Date date) {
+       // do something, set a flag for not today's view
+    }
+}
 ```
 
 # License
