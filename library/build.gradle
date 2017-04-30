@@ -23,3 +23,13 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.2.0'
     compile 'com.android.support:gridlayout-v7:25.2.0'
 }
+
+apply plugin: 'com.novoda.bintray-release'
+publish {
+    userOrg = 'shichaohui'
+    groupId = 'com.sch.calendar'
+    artifactId = 'easy-calendar'
+    publishVersion = '1.0.0'
+    desc = 'Quickly customize the calendar UI. You can use EasyCalendar to quickly get the calendar style UI.'
+    website = 'https://github.com/shichaohui/EasyCalendar.git'
+}
