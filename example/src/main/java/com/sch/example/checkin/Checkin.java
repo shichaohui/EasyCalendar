@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Stone辉
+ * Copyright 2017 StoneHui
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 package com.sch.example.checkin;
 
 /**
- * Created by Stone辉 on 17/4/28.
+ * Created by StoneHui on 17/4/28.
  * <p>
  * 签到数据
  */

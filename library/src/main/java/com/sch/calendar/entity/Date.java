@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Stone辉
+ * Copyright 2017 StoneHui
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import com.sch.calendar.annotation.DayOfMonth;
 import com.sch.calendar.annotation.Month;
 
 /**
- * Created by Stone辉 on 17/2/14.
+ * Created by StoneHui on 17/2/14.
  * <p>
  * Date. Include year, month, day of month, week of date.
  */

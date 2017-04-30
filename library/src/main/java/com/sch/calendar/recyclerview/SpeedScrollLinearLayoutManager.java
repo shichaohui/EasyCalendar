@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Stone辉
+ * Copyright 2017 StoneHui
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 
 /**
- * Created by Stone辉 on 17/2/24.
+ * Created by StoneHui on 17/2/24.
  * <p>
  * A linear layout manager for control scroll speed.
  */
