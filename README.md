@@ -17,8 +17,8 @@ compile 'com.sch.calendar:easy-calendar:1.0.0'
 |:----|:----|:----|
 | titleColor | color | set color for title |
 | weekColor | color | set color for week |
-| weekBackground | color|reference | set background for week bar |
-| monthBackground | color|reference | set backgroung for month layout |
+| weekBackground | color\|reference | set background for week bar |
+| monthBackground | color\|reference | set backgroung for month layout |
 | dateDividerColor | color | set color for divider of date |
 | dateDividerSize | dimension | set size for divider of date |
 | imgLastMonth | reference | set image for button of last month |
