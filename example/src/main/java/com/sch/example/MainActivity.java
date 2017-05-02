@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setCanDrag(true); // 可拖动
         calendarView.setScaleEnable(false); // 不可伸缩
         calendarView.setShowOverflowDate(true); // 显示溢出的日期
+        calendarView.setCanFling(true);
         calendarView.setTitleFormat("yyyy-MM", Locale.CHINA); // 设置标题的格式
         // 设置月份改变监听
         calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {

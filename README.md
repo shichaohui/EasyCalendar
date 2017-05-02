@@ -4,7 +4,7 @@ Quickly customize the calendar UI. You can use `EasyCalendar` to quickly get the
 
 # Screenshot
 
-<img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_main.jpg" width = "270" alt="默认样式" />  <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin.jpg" width = "270" alt="自定义样式" />
+<img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_main_gif.gif" width = "270" alt="默认样式" />  <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin_gif.gif" width = "270" alt="自定义样式" /> <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin.jpg" width = "270" alt="自定义样式" />
 
 # Gradle
 
