@@ -4,7 +4,9 @@ Quickly customize the calendar UI. You can use `EasyCalendar` to quickly get the
 
 # Screenshot
 
-<img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_main_gif.gif" width = "270" alt="默认样式" />  <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin_gif.gif" width = "270" alt="自定义样式" /> <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin.jpg" width = "270" alt="自定义样式" />
+<img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_main_gif.gif" width = "270" alt="默认样式" />  <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_action.jpg" width = "270" alt="自定义样式" />
+
+<img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin_gif.gif" width = "270" alt="自定义样式" /> <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_checkin.jpg" width = "270" alt="自定义样式" />
 
 # Gradle
 
@@ -16,6 +18,7 @@ compile 'com.sch.calendar:easy-calendar:1.0.0'
 | name | format | description |
 |:----|:----|:----|
 | titleColor | color | set color for title |
+| titleLayout | reference | custom layout for title |
 | weekColor | color | set color for week |
 | weekBackground | color\|reference | set background for week bar |
 | monthBackground | color\|reference | set backgroung for month layout |
