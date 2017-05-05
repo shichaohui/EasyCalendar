@@ -29,7 +29,7 @@ publish {
     userOrg = 'shichaohui'
     groupId = 'com.sch.calendar'
     artifactId = 'easy-calendar'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'Quickly customize the calendar UI. You can use EasyCalendar to quickly get the calendar style UI.'
     website = 'https://github.com/shichaohui/EasyCalendar.git'
 }
