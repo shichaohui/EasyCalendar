@@ -21,4 +21,11 @@
         android:layout_marginTop="10dp"
         android:text="@string/goto_checkin"/>
 
+    <Button
+        android:id="@+id/btn_look_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/look_action"/>
+
 </LinearLayout>

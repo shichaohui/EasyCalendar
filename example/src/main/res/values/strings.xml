@@ -3,4 +3,6 @@
     <string name="goto_checkin">去签到</string>
     <string name="checkin">签到</string>
     <string name="checkin_already">已签到</string>
+    <string name="look_action">查看活动</string>
+    <string name="action_calendar">活动日历</string>
 </resources>

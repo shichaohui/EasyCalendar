@@ -4,6 +4,7 @@
     <declare-styleable name="CalendarView">
 
         <attr name="titleColor" format="color"/>
+        <attr name="titleLayout" format="reference"/>
         <attr name="weekColor" format="color"/>
         <attr name="weekBackground" format="color|reference"/>
         <attr name="monthBackground" format="color|reference"/>

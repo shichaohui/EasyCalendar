@@ -14,17 +14,12 @@
   ~ See the License for the specific language governing permissions and limitations under the License.
   -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<resources>
 
-    <TextView
-        android:id="@id/tv_day_of_month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="5dp"/>
+    <item name="tv_title" type="id"/>
+    <item name="btn_last_month" type="id"/>
+    <item name="btn_next_month" type="id"/>
 
-</LinearLayout>
+    <item name="tv_day_of_month" type="id"/>
+
+</resources>

@@ -14,17 +14,25 @@
   ~ See the License for the specific language governing permissions and limitations under the License.
   -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="5dp">
 
     <TextView
         android:id="@id/tv_day_of_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:padding="5dp"/>
+        android:textColor="@color/contentTextHintColorDarker"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/iv_action_finished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:src="@mipmap/ic_flag_action_finished"
+        android:visibility="gone"/>
+
+</FrameLayout>

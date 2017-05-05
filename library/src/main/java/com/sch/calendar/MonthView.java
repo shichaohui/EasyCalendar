@@ -293,9 +293,9 @@ public class MonthView extends GridLayout {
         int itemViewWidth = getChildAt(0).getWidth();
         int startX = getPaddingLeft();
         int stopX = canvas.getWidth() - getPaddingRight();
-        for (int i = 0; i < ROW_MAX_COUNT; i++) {
+        for (int i = 1; i < ROW_MAX_COUNT; i++) {
             int startY = i % ROW_MAX_COUNT * itemViewWidth + getPaddingTop();
-            canvas.drawLine(startX, startY, stopX, startY + dateDividerSize, paint);
+            canvas.drawLine(startX, startY, stopX, startY, paint);
         }
     }
 
@@ -306,7 +306,7 @@ public class MonthView extends GridLayout {
         int stopY = canvas.getHeight() - getPaddingBottom();
         for (int i = 1; i < COLUMN_COUNT; i++) {
             int startX = i % COLUMN_COUNT * itemViewHeight + getPaddingLeft();
-            canvas.drawLine(startX, startY, startX + dateDividerSize, stopY, paint);
+            canvas.drawLine(startX, startY, startX, stopY, paint);
         }
     }
 

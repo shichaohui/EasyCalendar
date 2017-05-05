@@ -28,6 +28,7 @@ import com.sch.calendar.annotation.Month;
 import com.sch.calendar.entity.Date;
 import com.sch.calendar.listener.OnDateClickedListener;
 import com.sch.calendar.listener.OnMonthChangedListener;
+import com.sch.example.action.ActionActivity;
 import com.sch.example.checkin.CheckinActivity;
 
 import java.util.Locale;
@@ -59,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_goto_checkin)
     public void gotoCheckin() {
         startActivity(new Intent(this, CheckinActivity.class));
+    }
+
+    @OnClick(R.id.btn_look_action)
+    public void lookAction() {
+        startActivity(new Intent(this, ActionActivity.class));
     }
 
     // 初始化日历

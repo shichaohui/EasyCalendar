@@ -67,6 +67,7 @@ public class CalendarView extends LinearLayout {
 
     // params for layout
     private int titleColor;
+    private int titleLayoutRes;
     private int weekColor;
     private Drawable imgLastMonth;
     private Drawable imgNextMonth;
@@ -78,6 +79,7 @@ public class CalendarView extends LinearLayout {
 
     private LayoutInflater layoutInflater;
 
+    private View vTitleLayout;
     private ImageButton ibtnLastMonth; // last month
     private ImageButton ibtnNextMonth; // next month
     private TextView tvTitle; // title
@@ -121,6 +123,7 @@ public class CalendarView extends LinearLayout {
     private void readAttrs(AttributeSet attrs) {
         TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.CalendarView);
         titleColor = array.getColor(R.styleable.CalendarView_titleColor, Color.BLACK);
+        titleLayoutRes = array.getResourceId(R.styleable.CalendarView_titleLayout, R.layout.layout_calendar_title);
         weekColor = array.getColor(R.styleable.CalendarView_weekColor, Color.BLACK);
         imgLastMonth = array.getDrawable(R.styleable.CalendarView_imgLastMonth);
         imgNextMonth = array.getDrawable(R.styleable.CalendarView_imgNextMonth);
@@ -143,7 +146,7 @@ public class CalendarView extends LinearLayout {
 
         initRCVMonth();
 
-        setTitleFormat("yyyy年MM月", Locale.CHINA);
+        setTitleFormat("yyyy-MM", Locale.CHINA);
 
         // scroll to current date
         rcvMonth.scrollToPosition(currentPosition);
@@ -153,25 +156,31 @@ public class CalendarView extends LinearLayout {
     // initialize title bar
     private void initTitleBar() {
 
-        View titleLayout = layoutInflater.inflate(R.layout.layout_calendar_title, this, true);
+        vTitleLayout = layoutInflater.inflate(titleLayoutRes, this, true);
 
         // view of title
-        tvTitle = (TextView) titleLayout.findViewById(R.id.tv_title);
-        tvTitle.setTextColor(titleColor);
+        tvTitle = (TextView) vTitleLayout.findViewById(R.id.tv_title);
+        if (tvTitle != null) {
+            tvTitle.setTextColor(titleColor);
+        }
 
         ChangeMonthEvent changeMonthEvent = new ChangeMonthEvent();
         // view of last month
-        ibtnLastMonth = (ImageButton) titleLayout.findViewById(R.id.btn_last_month);
+        ibtnLastMonth = (ImageButton) vTitleLayout.findViewById(R.id.btn_last_month);
         if (imgLastMonth != null) {
             ibtnLastMonth.setImageDrawable(imgLastMonth);
         }
-        ibtnLastMonth.setOnClickListener(changeMonthEvent);
+        if (ibtnLastMonth != null) {
+            ibtnLastMonth.setOnClickListener(changeMonthEvent);
+        }
         // view of next month
-        ibtnNextMonth = (ImageButton) titleLayout.findViewById(R.id.btn_next_month);
+        ibtnNextMonth = (ImageButton) vTitleLayout.findViewById(R.id.btn_next_month);
         if (imgNextMonth != null) {
             ibtnNextMonth.setImageDrawable(imgNextMonth);
         }
-        ibtnNextMonth.setOnClickListener(changeMonthEvent);
+        if (ibtnNextMonth != null) {
+            ibtnNextMonth.setOnClickListener(changeMonthEvent);
+        }
     }
 
     // initialize week bar
@@ -230,6 +239,13 @@ public class CalendarView extends LinearLayout {
     }
 
     /**
+     * Return the layout of title.
+     */
+    public View getTitleLayout() {
+        return vTitleLayout;
+    }
+
+    /**
      * Constructs a <code>SimpleDateFormat</code> using the given pattern and
      * the default date format symbols for the given locale.
      * <b>Note:</b> This constructor may not support all locales.
@@ -273,14 +289,7 @@ public class CalendarView extends LinearLayout {
      * @param onMonthChangedListener listener
      */
     public void setOnMonthChangedListener(final OnMonthChangedListener onMonthChangedListener) {
-        this.onMonthChangedListener = new OnMonthChangedListener() {
-            @Override
-            public void onMonthChanged(Date date) {
-                onMonthChangedListener.onMonthChanged(date);
-                ibtnLastMonth.setEnabled(true);
-                ibtnNextMonth.setEnabled(true);
-            }
-        };
+        this.onMonthChangedListener = onMonthChangedListener;
     }
 
     /**
@@ -411,13 +420,27 @@ public class CalendarView extends LinearLayout {
 
     }
 
+    /**
+     * Set the button be used to change month enable or not.
+     *
+     * @param enable button enable
+     */
+    private void setChangeMonthButtonEnable(boolean enable) {
+        if (ibtnLastMonth != null) {
+            ibtnLastMonth.setEnabled(enable);
+        }
+        if (ibtnNextMonth != null) {
+            ibtnNextMonth.setEnabled(enable);
+        }
+    }
+
     // A listener, call back when month change.
     private class ChangeMonthEvent implements OnClickListener {
 
         @Override
         public void onClick(View view) {
-            ibtnLastMonth.setEnabled(false);
-            ibtnNextMonth.setEnabled(false);
+
+            setChangeMonthButtonEnable(false);
 
             if (view == ibtnLastMonth) {
                 rcvMonth.smoothScrollToPosition(currentPosition - 1);
@@ -463,6 +486,7 @@ public class CalendarView extends LinearLayout {
                 // call back
                 onMonthChangedListener.onMonthChanged(date);
             }
+            setChangeMonthButtonEnable(true);
 
             if (scaleEnable) {
                 updateCalendarHeight(date);

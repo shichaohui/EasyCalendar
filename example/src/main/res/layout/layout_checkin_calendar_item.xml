@@ -5,7 +5,7 @@
              android:padding="5dp">
 
     <TextView
-        android:id="@+id/tv_day_of_month"
+        android:id="@id/tv_day_of_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:src="@mipmap/checkin_calendar_ic_right"
+        android:src="@mipmap/ic_flag_checkin_already"
         android:visibility="gone"/>
 
 </FrameLayout>

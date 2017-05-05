@@ -17,32 +17,40 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/titleBarHeight">
+    android:layout_height="@dimen/titleBarHeight"
+    android:background="@drawable/bg_action_calendar">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:text="@string/action_calendar"
+        android:textColor="@android:color/black"/>
+
+    <ImageButton
+        android:id="@id/btn_next_month"
+        android:layout_width="@dimen/titleBarHeight"
+        android:layout_height="@dimen/titleBarHeight"
+        android:layout_alignParentRight="true"
+        android:background="?android:attr/actionBarItemBackground"
+        android:src="@mipmap/btn_bg_next_month"/>
 
     <TextView
         android:id="@id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/btn_next_month"
         android:gravity="center"
         android:textSize="18sp"/>
 
     <ImageButton
         android:id="@id/btn_last_month"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
+        android:layout_width="@dimen/titleBarHeight"
+        android:layout_height="@dimen/titleBarHeight"
         android:layout_toLeftOf="@id/tv_title"
         android:background="?android:attr/actionBarItemBackground"
         android:src="@mipmap/btn_bg_last_month"/>
-
-    <ImageButton
-        android:id="@id/btn_next_month"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/tv_title"
-        android:background="?android:attr/actionBarItemBackground"
-        android:src="@mipmap/btn_bg_next_month"/>
 
 </RelativeLayout>

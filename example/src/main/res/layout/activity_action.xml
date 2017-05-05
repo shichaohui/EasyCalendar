@@ -14,17 +14,27 @@
   ~ See the License for the specific language governing permissions and limitations under the License.
   -->
 
-<LinearLayout
+<FrameLayout
+    android:id="@+id/root_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cv="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:padding="16dp">
 
-    <TextView
-        android:id="@id/tv_day_of_month"
-        android:layout_width="wrap_content"
+    <com.sch.calendar.CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="5dp"/>
+        android:layout_marginTop="20dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        cv:dateDividerColor="@color/colorPrimary"
+        cv:dateDividerSize="0.5dp"
+        cv:monthBackground="@drawable/bg_action_calendar"
+        cv:titleLayout="@layout/layout_custom_title"
+        cv:weekBackground="@color/colorPrimary"
+        cv:weekColor="@color/white"/>
 
-</LinearLayout>
+</FrameLayout>
