@@ -11,7 +11,7 @@ Quickly customize the calendar UI. You can use `EasyCalendar` to quickly get the
 # Gradle
 
 ```
-compile 'com.sch.calendar:easy-calendar:1.0.0'
+compile 'com.sch.calendar:easy-calendar:1.0.1'
 ```
 
 # Attributes
