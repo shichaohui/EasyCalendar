@@ -2,6 +2,14 @@
 
 Quickly customize the calendar UI. You can use `EasyCalendar` to quickly get the calendar style UI.
 
+# Feature
+
+* Custom layout for title.
+* Custom layout for date.
+* Show or hide divider for date.
+* Show or hide overflow date.
+* Listen to date's view be clicked.
+
 # Screenshot
 
 <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_main_gif.gif" width = "270" alt="默认样式" />  <img src="https://github.com/shichaohui/EasyCalendar/blob/master/screeshot/screenshot_action.jpg" width = "270" alt="自定义样式" />
