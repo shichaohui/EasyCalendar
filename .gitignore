@@ -1,13 +1,9 @@
-/local.properties
-/.idea
+.idea
 .DS_Store
-/build
-/captures
+captures
 
 # Built application files
 *.apk
-*.ap_
-
 # Files for the ART/Dalvik VM
 *.dex
 
@@ -20,8 +16,9 @@ gen/
 out/
 
 # Gradle files
-.gradle/
-build/
+.gradle
+gradle
+build
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -40,11 +37,8 @@ captures/
 
 # Intellij
 *.iml
-.idea/workspace.xml
 .idea/tasks.xml
-.idea/gradle.xml
 .idea/dictionaries
-.idea/libraries
 
 # Keystore files
 *.jks
