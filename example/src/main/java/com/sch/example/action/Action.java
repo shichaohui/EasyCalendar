@@ -18,10 +18,11 @@ package com.sch.example.action;
 /**
  * Created by StoneHui on 17/4/28.
  * <p>
- * 活动数据
+ * Data for action
  */
 public class Action {
 
-    // 没有任何数据，可根据需要添加，如本次签到获取的积分数量等。
+    // Nothing. You can add something, such as gold by checkin.
+    // 没有任何数据。可以添加一些属性，例如签到获取的金币。
 
 }

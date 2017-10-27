@@ -41,7 +41,7 @@ import butterknife.ButterKnife;
 /**
  * Created by StoneHui on 17/4/26.
  * <p>
- * 活动日历页面
+ * Calendar for action.
  */
 public class ActionActivity extends Activity {
 
@@ -71,15 +71,15 @@ public class ActionActivity extends Activity {
         });
     }
 
-    // 初始化日历
+    // Initialize view for calendar.
     private void initCalendarView() {
-        // 数据适配器
+        // Create adapter
         vagueAdapter = new MyVagueAdapter(R.layout.layout_action_calendar_item);
         vagueAdapter.setData(new HashMap<String, Map<String, Action>>());
         calendarView.setVagueAdapter(vagueAdapter);
     }
 
-    // 创建数据
+    // Generate some data.
     private Map<String, Map<String, Action>> createCheckinData() {
 
         Map<String, Map<String, Action>> checkinMap = new HashMap<>();
@@ -108,33 +108,33 @@ public class ActionActivity extends Activity {
 
         @Override
         public void onBindVague(View itemView, int year, @Month int month, @DayOfMonth int dayOfMonth) {
-            ImageView ivActionFinished = (ImageView) itemView.findViewById(R.id.iv_action_finished);
+            ImageView ivActionFinished = itemView.findViewById(R.id.iv_action_finished);
             if (data == null) return;
-            // 获取当月数据
+            // Get the data of current month.
             Map<String, Action> monthMap = data.get(DateUtil.formatDate(year, month, dayOfMonth, MONTH_FORMAT));
-            // 无当月数据
+            // No data of current month.
             if (monthMap == null) {
                 ivActionFinished.setVisibility(View.GONE);
                 return;
             }
-            // 获取当日数据
+            // Get the data of today.
             Action history = monthMap.get(DateUtil.formatDate(year, month, dayOfMonth, DAY_OF_MONTH_FORMAT));
-            // 显示
+            // Show action finished or not.
             ivActionFinished.setVisibility(history == null ? View.GONE : View.VISIBLE);
         }
 
         @Override
         public void flagToday(View todayView) {
-            // 标记今天
-            TextView tvDayView = (TextView) todayView.findViewById(R.id.tv_day_of_month);
+            // Highlight today.
+            TextView tvDayView = todayView.findViewById(R.id.tv_day_of_month);
             tvDayView.setTextColor(Color.WHITE);
             todayView.setBackgroundColor(getResources().getColor(R.color.blue_light));
         }
 
         @Override
         public void flagNotToday(View dayView, Date date) {
-            // 重置普通日期（非今日）的状态
-            TextView tvDayView = (TextView) dayView.findViewById(R.id.tv_day_of_month);
+            // Reset the view of not today.
+            TextView tvDayView = dayView.findViewById(R.id.tv_day_of_month);
             tvDayView.setBackgroundColor(Color.TRANSPARENT);
             tvDayView.setTextColor(ResourcesHelper.getColor(getApplicationContext(), R.color.contentTextHintColor));
         }

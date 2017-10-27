@@ -40,7 +40,7 @@ import butterknife.OnClick;
 /**
  * Create by StoneHui on 17/04/10.
  * <p>
- * 示例 Activity
+ * Example
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -67,27 +67,27 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ActionActivity.class));
     }
 
-    // 初始化日历
+    // Initialize view for calendar
     private void initCalendarView() {
-        calendarView.setCanDrag(true); // 可拖动
-        calendarView.setScaleEnable(false); // 不可伸缩
-        calendarView.setShowOverflowDate(true); // 显示溢出的日期
+        calendarView.setCanDrag(true); // can't change month by slide
+        calendarView.setScaleEnable(false); // can't auto scale calendar when month changed.
+        calendarView.setShowOverflowDate(true); // hide overflow date of showing month.
         calendarView.setCanFling(true);
-        calendarView.setTitleFormat("yyyy-MM", Locale.CHINA); // 设置标题的格式
-        // 设置月份改变监听
+        calendarView.setTitleFormat("yyyy-MM", Locale.CHINA);
+        // Set a listener，callback when month changed.
         calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
             @Override
             public void onMonthChanged(Date date) {
             }
         });
-        // 日期点击监听
+        // Set a listener，callback when one of date be clicked.
         calendarView.setOnDateClickedListener(new OnDateClickedListener() {
             @Override
             public void onDateClicked(View itemView, int year, @Month int month, @DayOfMonth int dayOfMonth) {
                 Toast.makeText(MainActivity.this, String.format("%s年%s月%s日", year, month, dayOfMonth), Toast.LENGTH_SHORT).show();
             }
         });
-        // 数据适配器
+        // using SampleVagueAdapter
         calendarView.setVagueAdapter(new SampleVagueAdapter());
     }
 
